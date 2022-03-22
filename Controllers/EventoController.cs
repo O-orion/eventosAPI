@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using eventosAPI.Models;
+
 using Microsoft.AspNetCore.Mvc;
+using ProEventos.Domain;
 
 namespace eventosAPI.Controllers
 {
@@ -16,7 +17,7 @@ namespace eventosAPI.Controllers
         Evento vento = new Evento{
             NomeEvento = "Culto Jovem",
             LocalEvento = "Igreja Universal",
-            DataEvento = "04/09/2021"
+            DataEvento = new DateTime()
         };
     
         [HttpGet]
